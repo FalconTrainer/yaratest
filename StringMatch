@@ -1,0 +1,13 @@
+rule Detect_YARA_Falcon_Test_File
+{
+    meta:
+        description = "Detects an RTF file containing 'TEST YARA FALCON FOR IT TEST'"
+        author = "Cyber Analyst"
+        date = "2024-08-16"
+    
+    strings:
+        $test_string = "TEST YARA FALCON FOR IT TEST"
+    
+    condition:
+        $test_string
+}
